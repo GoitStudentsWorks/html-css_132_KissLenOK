@@ -1,7 +1,7 @@
 .hero-container {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
 }
 
 .hero-title {
@@ -35,6 +35,7 @@
 @media screen and (min-width: 768px) {
   .hero-title {
     font-size: 56px;
+    max-width: 600px;
   }
 
   .hero-buttons {
@@ -52,13 +53,39 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap: 32px;
   }
 
   .hero-content {
-    max-width: 520px;
+    width: 423px;
+    flex-shrink: 0;
   }
 
   .hero-title {
     font-size: 56px;
+    max-width: 423px;
+  }
+  .hero-buttons {
+    gap: 16px;
+  }
+
+  .hero .hero-buttons .button-filled {
+    width: 105px;
+  }
+
+  .hero .hero-buttons .button-transparent {
+    width: 127px;
+    white-space: nowrap;
+  }
+
+  .hero-container picture {
+    width: 857px;
+    flex-shrink: 0;
+  }
+
+  .hero-image {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 }
