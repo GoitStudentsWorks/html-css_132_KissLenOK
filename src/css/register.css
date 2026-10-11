@@ -3,8 +3,13 @@
   font-size: 48px;
   line-height: 1.1;
 }
-
+.container.reg {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
 .register-form-field {
+  position: relative;
   margin-bottom: 24px;
 }
 
@@ -30,15 +35,15 @@
 }
 
 .error {
+  position: absolute;
+  top: 100%;
+  left: 0;
   opacity: 0;
-  max-height: 0;
   transform: translateY(-4px);
-  overflow: hidden;
   color: #b50000;
 
   transition:
     opacity 250ms ease-out,
-    max-height 250ms ease-out,
     transform 250ms ease-out;
 }
 
@@ -65,7 +70,6 @@
 
 .register-form-input:user-invalid + .error {
   opacity: 1;
-  max-height: 30px;
   transform: translateY(0);
 }
 
@@ -98,7 +102,6 @@
 
 .btn-reg {
   width: 100%;
-  margin-bottom: 32px;
 }
 
 .img-contact {
@@ -120,12 +123,12 @@
 
 @media only screen and (min-width: 1440px) {
   .register.section {
-    padding: 112px 64px;
+    padding-top: 112px;
+    padding-bottom: 112px;
   }
 
   .container.reg {
-    display: flex;
-    gap: 32px;
+    flex-direction: row;
   }
 
   .register-wrapper {
