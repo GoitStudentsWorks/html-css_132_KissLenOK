@@ -7,18 +7,21 @@ body {
 }
 
 .section {
-  padding: 64px 20px;
+  padding-top: 64px;
+  padding-bottom: 64px;
 }
 
 @media only screen and (min-width: 768px) {
-  .container {
-    padding: 64px 32px;
+  .section {
+    padding-top: 64px;
+    padding-bottom: 64px;
   }
 }
 
 @media only screen and (min-width: 1440px) {
-  .container {
-    padding: 64px 64px;
+  .section {
+    padding-top: 64px;
+    padding-bottom: 64px;
   }
 }
 
